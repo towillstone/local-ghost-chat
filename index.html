@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chat with Ghost of UCF, a tiny AI running right in your browser.">
+<title>Local Ghost Chat</title><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header><a href="./">LOCAL GHOST CHAT <span>✦</span></a><span class="edition">CAMPUS AFTER HOURS / 001</span></header>
+<main>
+<section class="intro">
+<p class="eyebrow">A SMALL MODEL. A BIG BOO.</p>
+<h1>Your campus<br>spirit guide.</h1>
+<p class="lede">Meet <strong>Ghost of UCF</strong>. Eternally enrolled. Frequently caffeinated. Still looking for parking.</p>
+<div class="ghost" aria-hidden="true"><div class="eyes"><i></i><i></i></div><div class="mouth"></div><span>UCF</span></div>
+<p class="caption">UNDECLARED MAJOR. UNFINISHED BUSINESS.</p>
+<div class="about"><h2>Haunting, with school spirit.</h2><p>A fictional, friendly Knight who jokes about campus life, football, and student survival. Tiny AI can get confused or invent facts. Check official UCF sources for current information.</p></div>
+</section>
+<section class="chat-panel" aria-label="Chat with Ghost of UCF">
+<div class="chat-heading"><div><h2>Ghost of UCF</h2><p>Office hours are… forever.</p></div><span class="badge">ON YOUR DEVICE</span></div>
+<div class="model-box"><div class="status-line"><span class="dot" id="dot"></span><strong id="status" role="status">Model not loaded</strong></div><p id="load-detail">First visit downloads about 150–180 MB including the runtime. Chats are generated locally.</p><progress id="progress" max="100" hidden aria-label="Current file download progress"></progress><button id="load" type="button">Wake the ghost ↓</button><p id="metrics" class="metrics">SmolLM2 · 135M · q8 · CPU / WebAssembly</p></div>
+<div id="messages" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions"><article class="message ghost-message"><span class="speaker">GHOST OF UCF · SCRIPTED GREETING</span><p>Boo! I’m Ghost of UCF. I’ve been here six semesters and three centuries. Load my tiny brain, then ask me about campus life, football, or surviving finals.</p></article></div>
+<div class="suggestions" aria-label="Suggested messages"><button type="button" data-prompt="Tell me a ghost joke about campus parking.">Parking purgatory</button><button type="button" data-prompt="How do you celebrate UCF football game day?">Game-day spirit</button><button type="button" data-prompt="Give me funny advice for surviving finals.">Finals survival</button></div>
+<form id="chat-form"><label for="prompt">YOUR MESSAGE</label><div class="composer"><textarea id="prompt" rows="2" maxlength="400" placeholder="What’s haunting you this semester?" disabled></textarea><button id="send" type="submit" disabled>Send ↗</button></div><div class="composer-foot"><span>Enter to send · Shift + Enter for a new line</span><button id="reset" type="button" disabled>Clear chat</button></div></form>
+<p class="privacy">Messages stay in this tab. Model files load from Hugging Face and the library from jsDelivr. No cloud inference API or chat storage.</p>
+</section>
+<section class="notes"><h2>Meet the tiny brain.</h2><p><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct">SmolLM2-135M-Instruct</a> is an Apache-2.0 open model, run with Transformers.js 3.8.1 using <a href="https://huggingface.co/onnx-community/SmolLM2-135M-Instruct-ONNX">ONNX weights</a>. Its q8 file is about 136 MB. Allow an estimated 0.5–1.5 GB of free memory and about 200 MB of cache space. These are planning estimates, not measured limits. Try current Chrome or Edge on a Mac with 8 GB RAM or more. CPU speed varies. The browser may cache downloads for future visits.</p></section>
+</main><footer>MADE FOR A COLLEGE EXPERIMENT <span>✦</span> ALL SPIRIT, NO SERVER BRAIN.</footer>
+<script type="module" src="./app.js"></script>
+</body></html>
